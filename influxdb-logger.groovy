@@ -33,8 +33,11 @@ import groovy.transform.Field
 @Field static final asyncLock = new Object[0]
 @Field static TreeMap stats = [
     _totalSends: 0,
+    _totalSendTime: 0,
+    _maxSendTime: 0,
     _totalEvents: 0,
     _sumQueueSize: 0,
+    _maxQueueSize: 0,
 ]
 
 definition(
