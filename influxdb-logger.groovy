@@ -133,6 +133,7 @@ preferences {
         input "temperatures", "capability.temperatureMeasurement", title: "Temperature Sensors", multiple: true, required: false
         input "thermostats", "capability.thermostat", title: "Thermostats", multiple: true, required: false
         input "threeAxis", "capability.threeAxis", title: "Three-axis (Orientation) Sensors", multiple: true, required: false
+        input "timedSession", "capability.timedSession", title: "Timed Session", multiple: true, required: false
         input "touchs", "capability.touchSensor", title: "Touch Sensors", multiple: true, required: false
         input "uvs", "capability.ultravioletIndex", title: "UV Sensors", multiple: true, required: false
         input "valves", "capability.valve", title: "Valves", multiple: true, required: false
@@ -257,6 +258,7 @@ def updated() {
     state.deviceAttributes << [ devices: 'temperatures', attributes: ['temperature']]
     state.deviceAttributes << [ devices: 'thermostats', attributes: ['temperature','heatingSetpoint','coolingSetpoint','thermostatSetpoint','thermostatMode','thermostatFanMode','thermostatOperatingState','thermostatSetpointMode','scheduledSetpoint','optimisation','windowFunction']]
     state.deviceAttributes << [ devices: 'threeAxis', attributes: ['threeAxis']]
+    state.deviceAttributes << [ devices: 'timedSession', attributes: ['timeRemaining', 'timeElapsed']]
     state.deviceAttributes << [ devices: 'touchs', attributes: ['touch']]
     state.deviceAttributes << [ devices: 'uvs', attributes: ['ultravioletIndex']]
     state.deviceAttributes << [ devices: 'valves', attributes: ['contact']]
