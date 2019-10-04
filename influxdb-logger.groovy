@@ -1,9 +1,10 @@
 /*****************************************************************************************************************
- *  Source: https://github.com/HubitatCommunity/InfluxDB-Logger
+ *  Source: https://github.com/as-j/InfluxDB-Logger
  *
- *  Raw Source: https://raw.githubusercontent.com/HubitatCommunity/InfluxDB-Logger/master/influxdb-logger.groovy
+ *  Raw Source: https://raw.githubusercontent.com/as-j/InfluxDB-Logger/master/influxdb-logger.groovy
  *
  *  Forked from: https://github.com/codersaur/SmartThings/tree/master/smartapps/influxdb-logger
+ *  Then forked from: https://github.com/HubitatCommunity/InfluxDB-Logger
  *  Original Author: David Lomas (codersaur)
  *  Hubitat Elevation version maintained by Joshua Marker (@tooluser)
  *
@@ -25,6 +26,8 @@
  *   Modifcation History
  *   Date       Name		Change 
  *   2019-02-02 Dan Ogorchock	Use asynchttpPost() instead of httpPost() call
+ *   2019-09-30 A Stanley-Jones Queue and limit asyncHttp calls to influxdb
+ *   2019-10-03 A Stanley-Jones Add support for TimedSession devices (timers)
  *****************************************************************************************************************/
 import groovy.transform.Field
 
